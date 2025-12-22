@@ -282,8 +282,10 @@ def head_csv(
     n: int = Query(5, description="Количество первых строк датасета на вывод")
 ):
     """
-    HTTP-обёртка, принимающая CSV файл и количество n необходимых для возврата первых строк
-    датасета (по умолчанию 5). Возвращает первые n строк в формате JSON.
+    HTTP-обёртка над CLI-командой head, принимающая CSV файл и количество n необходимых
+    для возврата первых строк датасета (по умолчанию 5). Возвращает первые n строк в
+    формате JSON в случае прохождения выборкой минимальных проверок на качество или же
+    сообщение-предупреждение, если проверки пройдены не были.
     """
     if file.content_type not in ("text/csv", "application/vnd.ms-excel", "application/octet-stream"):
         raise HTTPException(status_code=400, detail="Ожидается CSV-файл (content-type text/csv).")
@@ -296,4 +298,18 @@ def head_csv(
     if df.empty:
         raise HTTPException(status_code=400, detail="CSV-файл не содержит данных (пустой DataFrame).")
     
-    return df.head(n).to_dict(orient="records")
+    head_df = df.head(n)
+    result = {"data": head_df.to_dict(orient="records")}
+    
+    summary = summarize_dataset(head_df)
+    
+    constant_cols = [col.name for col in summary.columns if col.unique == 1]
+    
+    if constant_cols:
+        result["quality_warning"] = {
+            "message": "В выборке обнаружены константные колонки",
+            "constant_columns": constant_cols,
+            "recommendation": "Рассмотрите удаление этих колонок"
+        }
+    
+    return result
