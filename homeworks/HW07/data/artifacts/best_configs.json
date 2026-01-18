@@ -1,0 +1,1 @@
+{"DF1": {"best_method": "KMeans", "best_params": {"k": 2}, "criteria": "silhouette_score"}, "DF2": {"best_method": "KMeans", "best_params": {"k": 2}, "criteria": "silhouette_score"}, "DF3": {"best_method": "KMeans", "best_params": {"k": 3}, "criteria": "silhouette_score"}}
