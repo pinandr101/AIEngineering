@@ -1,28 +1,25 @@
 {
-  "experiment_id": "E4",
   "dataset": "EMNIST_balanced",
   "seed": 42,
-  "model": {
-    "input_dim": 784,
-    "num_classes": 47,
-    "hidden_dims": [
-      512,
-      256,
-      128
-    ],
-    "activation": "relu",
-    "dropout_p": 0.0,
-    "use_batchnorm": true
-  },
-  "training": {
-    "optimizer": "Adam",
-    "lr": 0.001,
-    "weight_decay": 0.0,
-    "momentum": null,
-    "batch_size": 128,
-    "epochs_trained": 8,
-    "early_stopping_patience": 4,
-    "best_val_accuracy": 0.853416313559322,
-    "best_val_loss": 0.4383416049561258
-  }
+  "input_dim": 784,
+  "num_classes": 47,
+  "hidden_dims": [
+    512,
+    256,
+    128
+  ],
+  "activation": "relu",
+  "dropout_p": 0.0,
+  "use_batchnorm": true,
+  "optimizer": "Adam",
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "momentum": null,
+  "batch_size": 128,
+  "epochs_trained": 11,
+  "early_stopping_patience": 4,
+  "best_val_accuracy": 0.8554025423728814,
+  "best_val_loss": 0.4349979248087285,
+  "loss": "CrossEntropyLoss",
+  "metric": "accuracy"
 }

@@ -1,8 +1,8 @@
 experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss
-E1,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=False",Adam,0.001,,0.0,20,0.8421610169491526,0.4854193326443602
-E2,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.3, bn=False",Adam,0.001,,0.0,20,0.8413223870056498,0.47139173106285137
-E3,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,0.001,,0.0,20,0.8559322033898306,0.44375402181498746
-E4,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,0.001,,0.0,8,0.853416313559322,0.4383416049561258
-O1,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,0.1,,0.0,8,0.817531779661017,0.5857766934033841
-O2,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,1e-05,,0.0,8,0.7327860169491526,1.288845355901341
-O3,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",SGD,0.01,0.9,0.0001,12,0.8531514830508474,0.43971954446054445
+E1,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=False",Adam,0.001,,0.0,20,0.845162429378531,0.47892534404487935
+E2,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.3, bn=False",Adam,0.001,,0.0,20,0.8434410310734464,0.46214417212427
+E3,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,0.001,,0.0,20,0.8581391242937854,0.43181053772147765
+E4,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,0.001,,0.0,11,0.8554025423728814,0.4349979248087285
+O1,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,0.1,,0.0,8,0.8232256355932204,0.5471021202997973
+O2,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",Adam,1e-05,,0.0,8,0.7390978107344632,1.2888581759512088
+O3,EMNIST_balanced,42,"hidden=(512, 256, 128), act=relu, dropout=0.0, bn=True",SGD,0.01,0.9,0.0001,12,0.8526218220338984,0.4463126684649516
