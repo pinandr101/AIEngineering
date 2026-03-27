@@ -1,0 +1,11 @@
+{
+  "dataset": "STL10",
+  "architecture": "resnet18-finetune",
+  "seed": 42,
+  "best_val_accuracy": 0.957,
+  "epochs": 12,
+  "batch_size": 64,
+  "optimizer": "Adam",
+  "lr": "1e-3/1e-4 for C4",
+  "transforms": "resnet_train_transform (with resize/crop/normalize)"
+}
