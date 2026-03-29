@@ -6,6 +6,6 @@
   "epochs": 12,
   "batch_size": 64,
   "optimizer": "Adam",
-  "lr": "1e-3/1e-4 for C4",
+  "lr": 0.001,
   "transforms": "resnet_train_transform (with resize/crop/normalize)"
 }
