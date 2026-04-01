@@ -1,4 +1,4 @@
-experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,pixel_precision,pixel_recall,mean_iou,notes
 C1,classification,STL10,42,simple-cnn-base,Adam,0.001,12,0.612,,,,,
 C2,classification,STL10,42,simple-cnn-aug,Adam,0.001,12,0.619,,,,,
 C3,classification,STL10,42,resnet18-head-only,Adam,0.001,12,0.955,,,,,
