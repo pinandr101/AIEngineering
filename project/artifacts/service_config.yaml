@@ -1,0 +1,25 @@
+categories:
+- Groceries
+- Furniture
+- Electronics
+- Clothing
+- Toys
+feature_cols:
+- dayofweek
+- month
+- dow_sin
+- dow_cos
+- month_sin
+- month_cos
+- lag_1
+- lag_7
+- lag_14
+- rolling_mean_7
+- rolling_std_7
+lags:
+- 1
+- 7
+- 14
+rolling_windows:
+- 7
+window_size: 28

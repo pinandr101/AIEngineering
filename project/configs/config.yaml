@@ -1,0 +1,27 @@
+data:
+  raw_path: "data/retail_store_inventory.csv"
+
+split:
+  train_frac: 0.70
+  val_frac: 0.15
+  test_frac: 0.15
+
+features:
+  lags: [1, 7, 14]
+  rolling_windows: [7]
+
+model:
+  gru:
+    window_size: 28
+    hidden_size: 64
+    num_layers: 2
+    batch_size: 64
+    lr: 0.001
+    num_epochs: 30
+
+categories:
+  - Groceries
+  - Toys
+  - Electronics
+  - Clothing
+  - Furniture
